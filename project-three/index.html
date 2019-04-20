@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>James Braun's Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h3>THE CODE REVIEW</h3>
+    </header>
+    <section>
+        <h3>Signup for our newsletter</h3>
+        <p>Get the latest news on how your code is doing right in your inbox.</p>
+    </section>
+    <main>
+        <form action="index.html" method="post">
+            <fieldset id="first-fieldset">
+                <legend id="first-legend">Contact Information</legend>
+                <div class="flex-container">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="user_name" placeholder="required  " required pattern="[A-Z]{1,1}[a-z]{1,} [A-Z]{1,1}[a-z]{1,1}[A-Z]{0,1}[a-z]{0,}">
+                </div>
+                <div class="flex-container">
+                    <label for="mail">Email Address</label>
+                    <input type="email" id="mail" name="user_email" placeholder="required  " required>
+                </div>
+                <div class="flex-container">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="user_phone" placeholder="optional ">
+                </div>
+                <div class="flex-container">
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" name="user_address" placeholder="optional ">
+                </div>
+                <div class="flex-container">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="user_city" placeholder="optional ">
+                </div>
+                <div class="flex-container">
+                    <label for="state">State</label>
+                    <select id="state" name="user_state">
+                        <option value="">Choose State...</option>
+                        <option value="alabama">Alabama</option>
+                        <option value="alaska">Alaska</option>
+                        <option value="arizona">Arizona</option>
+                        <option value="arkansas">Arkansas</option>
+                        <option value="california">California</option>
+                        <option value="colorado">Colorado</option>
+                        <option value="connecticut">Connecticut</option>
+                        <option value="delaware">Delaware</option>
+                        <option value="florida">Florida</option>
+                        <option value="georgia">Georgia</option>
+                        <option value="hawaii">Hawaii</option>
+                        <option value="idaho">Idaho</option>
+                        <option value="illinois">Illinois</option>
+                        <option value="indiana">indiana</option>
+                        <option value="iowa">Iowa</option>
+                        <option value="kansas">Kansas</option>
+                        <option value="kentucky">Kentucky</option>
+                        <option value="louisiana">Louisiana</option>
+                        <option value="maine">Maine</option>
+                        <option value="maryland">Maryland</option>
+                        <option value="massachusetts">Massachusetts</option>
+                        <option value="michigan">Michigan</option>
+                        <option value="minnesota">Minnesota</option>
+                        <option value="mississippi">Mississippi</option>
+                        <option value="missouri">Missouri</option>
+                        <option value="montana">Montana</option>
+                        <option value="nebraska">Nebraska</option>
+                        <option value="nevada">Nevada</option>
+                        <option value="newHampshire">New Hampshire</option>
+                        <option value="newJersey">New Jersey</option>
+                        <option value="newMexico">New Mexico</option>
+                        <option value="newYork">New York</option>
+                        <option value="northCarolina">North Carolina</option>
+                        <option value="northDakota">North Dakota</option>
+                        <option value="ohio">Ohio</option>
+                        <option value="oklahoma">Oklahoma</option>
+                        <option value="oregon">Oregon</option>
+                        <option value="pennsylvania">Pennsylvania</option>
+                        <option value="rhodeIsland">Rhode Island</option>
+                        <option value="southCarolina">South Carolina</option>
+                        <option value="southDakota">South Dakota</option>
+                        <option value="tennessee">Tennessee</option>
+                        <option value="texas">Texas</option>
+                        <option value="utah">Utah</option>
+                        <option value="vermont">Vermont</option>
+                        <option value="virginia">Virginia</option>
+                        <option value="washington">Washington</option>
+                        <option value="washingtonDC">Washington D.C.</option>
+                        <option value="westVirginia">West Virginia</option>
+                        <option value="wisconsin">Wisconsin</option>
+                        <option value="wyoming">Wyoming</option>
+                    </select>
+                </div>
+                <div class="flex-container">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="user_zip_code" placeholder="optional ">
+                </div>
+            </fieldset>
+            <fieldset id="second-fieldset">
+                <legend>Newsletter</legend>
+                <p>Select the newsletters you would like to receive</p>
+                <div class="second-flex-container">
+                    <input type="checkbox" id="HTML_news" value="HTML_news" name="user_checkbox" checked>
+                    <label for="HTML_news">HTML News</label>
+                </div>
+                <div class="second-flex-container">
+                    <input type="checkbox" id="CSS_news" value="CSS_news" name="user_checkbox">
+                    <label for="CSS_news">CSS News</label>
+                </div>
+                <div class="second-flex-container">
+                    <input type="checkbox" id="JavaScript_news" value="JavaScript_news" name="user_checkbox">
+                    <label for="JavaScript_news">JavaScript News</label>
+                </div>
+                <p>Newsletter format</p>
+                <div class="second-flex-container">
+                    <input type="radio" id="html" value="html" name="user_radio" checked>
+                    <label for="html">HTML</label>
+                </div>
+                <div class="second-flex-container">
+                    <input type="radio" id="text" value="text" name="user_radio">
+                    <label for="text">Plain text</label>
+                </div>
+                <label for="topics">Other topics you'd like to hear about</label>
+                <textarea id="topics" name="user_topics"></textarea>
+                <button type="submit">Sign Up</button>        
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>

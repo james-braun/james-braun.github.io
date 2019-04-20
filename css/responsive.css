@@ -1,0 +1,114 @@
+@media (min-width: 48em) {
+
+    .sub-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .item {
+        margin: 0 1.5em;
+    }
+
+    #search {
+        width: 28.125em;
+    }
+
+    .profile-picture-and-text {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 38.75em;
+        height: 10.4375em;
+        text-align: left;
+    }
+
+    .profile-picture-and-text  h3 {
+        margin: 0 0.625em;
+    }
+
+    .profile-picture-and-text img {
+        flex-shrink: 0;
+    }
+
+    .gallery {
+        display: inline-flex;
+        flex-direction: row;
+        width: 48em;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-pictures-and-text {
+        margin: 0 0 1.5em;
+    }
+
+    #contact {
+        width: 28.75em;
+    }
+
+    .footer-container {
+        display: inline-flex;
+        width: 38.75em;
+        justify-content: flex-start;
+    }
+
+    .footer-item-2,
+    .footer-item-3,
+    .footer-item-4 {
+        display: block;
+        margin: 0 0.625em;
+    }
+
+    .footer-item-5 {
+        display: none;
+    }
+
+    .footer-item-1 {
+        margin-right: auto;
+    }
+
+    
+}
+
+@media (min-width: 64em) {
+
+    .navigation {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 58.75em;
+    }
+
+    .name {
+        margin-right: auto;
+    }
+
+    .sub-navigation .item {
+       padding-top: 0.625em;
+    }
+
+    #search {
+        width: 37.5em;
+    }
+
+    .profile-picture-and-text {
+        width: 57.5em;
+        height: 14.0625em;
+    }
+
+    .profile-picture-and-text img {
+        width: 22.9375em;
+    }
+
+    .gallery {
+        width: 64em;
+    }
+
+    #contact {
+        width: 31.25em;
+    }
+
+    .footer-container {
+        width: 57.5em;
+    }
+}

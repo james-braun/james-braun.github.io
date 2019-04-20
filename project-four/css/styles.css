@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 4em auto 0;  
+}
+
+/* styling for input element. */
+#search {
+    margin: 4em auto;
+    display: grid;
+    grid-template-columns: 12.5em;
+    font-size: 1em;
+    height: 1.5em;
+}
+
+/* styling for pictures */
+.container {
+    width: 12.5em;
+    margin: 4em auto;
+    display: grid;
+    grid-template-columns: 12.5em;
+    grid-gap: 4em;
+}
+ 
+@media (min-width: 47.5em) {
+    .container {
+        width: 47.5em;
+        grid-template-columns: 12.5em 12.5em 12.5em;
+    }
+
+    #search {
+        width: 21em;
+    }
+}
+
+@media (min-width: 64em) {
+    .container {
+        width: 64em;
+        grid-template-columns: 12.5em 12.5em 12.5em 12.5em;
+    }
+
+    #search {
+        width: 31em;
+    }
+}

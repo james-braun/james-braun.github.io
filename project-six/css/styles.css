@@ -1,0 +1,32 @@
+.wrapper {
+    display: block;
+    margin: 0 auto 35px;
+    width: 414px;
+    height: 270px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    width: 380px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* change color of media controls */
+.mejs__controls:not([style*='display: none']) {
+    background: rgba(0, 255, 0, 0.35);
+}
+
+
+@media (min-width: 768px) {
+    .wrapper {
+        margin: 35px auto;
+        width: 768px;
+        height: 432px; 
+    }
+
+    p {
+        width: 768px;
+    }
+}
