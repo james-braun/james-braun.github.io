@@ -54,7 +54,7 @@ $(document).ready(function () {
     var touchStartFlag = false;
 
     // add event listeners
-    for (i = 0; i < portfolio.length; i += 1) {
+    for (var i = 0; i < portfolio.length; i += 1) {
 
         // if repository touchstart then goto repository page.
         repository[i].addEventListener('touchstart', function (e) {
@@ -108,9 +108,9 @@ $(document).ready(function () {
             this.style.transform = "scale(1)";
 
             // after 375 mili-second if user has not scrolled then goto project page.
-            var portfolioElementUrl = this.getElementsByTagName('a')[0].href
+            var portfolioElementUrl = this.getElementsByTagName('a')[0].href;
             if (!touchMoveFlag) {
-                setTimeout(function () { window.location.href = portfolioElementUrl }, 375);
+                setTimeout(function () { window.location.href = portfolioElementUrl; }, 375);
                 touchMoveFlag = false;
             }
         });
