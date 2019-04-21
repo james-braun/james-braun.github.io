@@ -67,6 +67,7 @@ $(document).ready(function () {
 
     for (i = 0; i < portfolio.length; i += 1) {
         portfolio[i].addEventListener('touchend', function () {
+            this.style.transform = "scale(1)";
             window.location = this.getElementsByTagName('a')[0].href;
         });
     }
