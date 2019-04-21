@@ -76,7 +76,7 @@ $(document).ready(function () {
             this.style.transform = "scale(1)";
             var portfolioElementUrl = this.getElementsByTagName('a')[0].href
             if (!eventFlag) {
-                setTimeout(function () { myFunc(portfolioElementUrl) }, 250);
+                setTimeout(function () { window.location.href = portfolioElementUrl }, 250);
                 eventFlag = false;
             }
 
@@ -84,7 +84,5 @@ $(document).ready(function () {
         });
     }
 
-    function myFunc(portfolioElementUrl) {
-        window.location.href = portfolioElementUrl;
-    }
+    
 });
