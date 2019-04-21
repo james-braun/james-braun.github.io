@@ -72,7 +72,7 @@ $(document).ready(function () {
             this.style.transform = "scale(1)";
             var portfolioElementUrl = this.getElementsByTagName('a')[0].href
             if (!eventFlag) {
-                setTimeout(function () { myFunc(portfolioElementUrl) }, 500);
+                setTimeout(function () { myFunc(portfolioElementUrl) }, 250);
                 eventFlag = false;
             }
 
