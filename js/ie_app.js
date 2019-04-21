@@ -61,8 +61,13 @@ $(document).ready(function () {
     for (i = 0; i < portfolio.length; i += 1) {
         portfolio[i].addEventListener('touchstart', function (e) {
             e.preventDefault();
-            this.getElementsByTagName('h2')[0].style.color = "blue";
-            this.getElementsByTagName('h3')[0].style.color = "blue";
+            this.style.transform = "scale(1.1)";
+        });
+    }
+
+    for (i = 0; i < portfolio.length; i += 1) {
+        portfolio[i].addEventListener('touchend', function () {
+            window.location = this.getElementsByTagName('a')[0].href;
         });
     }
 });
