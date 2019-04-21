@@ -48,7 +48,7 @@ body {
 
 .portfolio-pictures-and-text {
     width: 19.375em;
-    margin: 0 auto;
+    margin: 0 auto 1.5em;
     transition: transform 0.5s;
 }
 
