@@ -57,4 +57,12 @@ $(document).ready(function () {
             this.getElementsByTagName('h3')[0].style.color = "cadetblue";
         });
     }
+
+    for (i = 0; i < portfolio.length; i += 1) {
+        portfolio[i].addEventListener('touch', function () {
+            this.preventDefault();
+            this.getElementsByTagName('h2')[0].style.color = "darkslateblue";
+            this.getElementsByTagName('h3')[0].style.color = "cadetblue";
+        });
+    }
 });
