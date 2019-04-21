@@ -61,7 +61,7 @@ $(document).ready(function () {
     for (i = 0; i < portfolio.length; i += 1) {
         portfolio[i].addEventListener('touchstart', function (e) {
             for (i = 0; i < e.targetTouches.length; i += 1) {
-                e.targetTouches[i].target.preventDefault();
+                e.targetTouches[i].preventDefault();
             }
             this.getElementsByTagName('h2')[0].style.color = "blue";
             this.getElementsByTagName('h3')[0].style.color = "blue";
