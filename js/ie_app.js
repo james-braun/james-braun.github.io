@@ -63,7 +63,7 @@ $(document).ready(function () {
  
         portfolio[i].addEventListener('touchstart', function () {
             eventFlagTwo = true;
-            this.style.transform = "scale(1.1)";
+            this.style.transform = "scale(1.3)";
         });
 
         portfolio[i].addEventListener('touchmove', function () {
