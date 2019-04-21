@@ -63,11 +63,4 @@ $(document).ready(function () {
             e.preventDefault();
         });
     }
-
-    for (i = 0; i < portfolio.length; i += 1) {
-        portfolio[i].addEventListener('touchend', function () {
-            this.getElementsByTagName('h2')[0].style.color = "cadetblue";
-            this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
-        });
-    }
 });
