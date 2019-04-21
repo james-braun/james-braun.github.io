@@ -6,6 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     background-color: aliceblue;
+    text-shadow: 0.3125em 0.3125em 0.3125em #aaaaaa;
 }
 
 .navigation {
@@ -19,6 +20,8 @@ body {
     display: block;
     margin: 1em auto 1.5em;
     width: 17.5em;
+    border: solid 1px lightslategray;
+    box-shadow: 0.3125em 0.3125em 0.3125em #aaaaaa;
 }
 
 .item {
@@ -35,6 +38,7 @@ body {
     padding: 0.625em;
     background-color: antiquewhite;
     border: solid 1px lightslategray;
+    box-shadow: 0.3125em 0.3125em 0.3125em #aaaaaa;
 }
 
 #portfolio {
@@ -51,8 +55,9 @@ body {
 .portfolio-pictures-and-text img {
     width: 18.75em;
     padding: 0.625em;
-    background-color:antiquewhite;
+    background-color: antiquewhite;
     border: solid 1px lightslategray;
+    box-shadow: 0.3125em 0.3125em 0.3125em #aaaaaa;
 }
 
 .portfolio-pictures-and-text:hover {
