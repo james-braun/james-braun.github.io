@@ -83,6 +83,7 @@ $(document).ready(function () {
         portfolio[i].addEventListener('touchstart', function () {
             this.getElementsByTagName('h2')[0].style.color = "cadetblue";
             this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
+            this.style.zIndex = 1000;
             this.style.transform = "scale(1.3)";
 
             // Stop mouseover from changing text colors.
@@ -106,6 +107,7 @@ $(document).ready(function () {
 
             // put item back on page.
             this.style.transform = "scale(1)";
+            this.style.zIndex = 100;
 
             // after 375 mili-second if user has not scrolled then goto project page.
             var portfolioElementUrl = this.getElementsByTagName('a')[0].href;

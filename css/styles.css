@@ -50,6 +50,7 @@ body {
     width: 19.375em;
     margin: 0 auto 1.5em;
     transition: transform 0.5s;
+    position: relative;
 }
 
 .portfolio-pictures-and-text img {
@@ -66,11 +67,6 @@ body {
 
 .attribute {
     margin: 0 0.625em 0.625em;
-    position: relative;
-}
-
-.repo {
-    position: relative;
 }
 
 #contact {
