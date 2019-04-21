@@ -11,6 +11,7 @@ $(document).ready(function () {
 
     // Holds list of projects in my portfolio.
     const portfolio = document.getElementsByClassName("portfolio-pictures-and-text");
+    const repository = document.getElementsByClassName("repo");
 
     // set input elements attributes.
     searchElement.setAttribute('type', 'search');
@@ -54,6 +55,12 @@ $(document).ready(function () {
 
     // add event listeners
     for (i = 0; i < portfolio.length; i += 1) {
+
+        // if repository touchstart then goto repository page.
+        repository[i].addEventListener('touchstart', function (e) {
+            e.preventDefault();
+            window.location.href = this.href;
+        });
 
         // change colors on mouseover.
         portfolio[i].addEventListener('mouseover', function () {
