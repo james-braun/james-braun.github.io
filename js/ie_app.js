@@ -61,13 +61,11 @@ $(document).ready(function () {
     for (i = 0; i < portfolio.length; i += 1) {
         portfolio[i].addEventListener('touchstart', function (e) {
             e.preventDefault();
-            this.getElementsByTagName('h2')[0].style.color = "darkslateblue";
-            this.getElementsByTagName('h3')[0].style.color = "cadetblue";
         });
     }
 
     for (i = 0; i < portfolio.length; i += 1) {
-        portfolio[i].addEventListener('touchend', function (e) {
+        portfolio[i].addEventListener('touchend', function () {
             this.getElementsByTagName('h2')[0].style.color = "cadetblue";
             this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
         });
