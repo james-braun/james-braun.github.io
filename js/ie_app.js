@@ -44,6 +44,8 @@ $(document).ready(function () {
         });
     });
 
+
+
     for (i = 0; i < portfolio.length; i += 1) {
         portfolio[i].addEventListener('mouseover', function () {
             this.getElementsByTagName('h2')[0].style.color = "cadetblue";
@@ -62,7 +64,13 @@ $(document).ready(function () {
         portfolio[i].addEventListener('touchend', function (e) {
             e.preventDefault();
             this.style.transform = "scale(1)";
-            window.location = this.getElementsByTagName('a')[0].href;
+            var portfolioElementUrl = this.getElementsByTagName('a')[0].href
+            setTimeout(function () { myFunc(portfolioElementUrl) }, 500);
+
         });
+    }
+
+    function myFunc(portfolioElementUrl) {
+        window.location.href = portfolioElementUrl;
     }
 });
