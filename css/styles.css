@@ -69,6 +69,10 @@ body {
     position: relative;
 }
 
+.repo {
+    position: relative;
+}
+
 #contact {
     width: 19.375em;
     margin: 4.6875em auto 0;
