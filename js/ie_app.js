@@ -59,7 +59,8 @@ $(document).ready(function () {
             this.style.transform = "scale(1.1)";
         });
 
-        portfolio[i].addEventListener('touchend', function () {
+        portfolio[i].addEventListener('touchend', function (e) {
+            e.preventDefault();
             this.style.transform = "scale(1)";
             window.location = this.getElementsByTagName('a')[0].href;
         });
