@@ -51,6 +51,7 @@ body {
     margin: 0 auto 1.5em;
     transition: transform 0.5s;
     position: relative;
+    z-index: 100;
 }
 
 .portfolio-pictures-and-text img {
@@ -62,7 +63,8 @@ body {
 }
 
 .portfolio-pictures-and-text:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    z-index: 1000;
 }
 
 .attribute {
