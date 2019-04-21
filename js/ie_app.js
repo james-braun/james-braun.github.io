@@ -65,7 +65,7 @@ $(document).ready(function () {
             e.preventDefault();
             this.style.transform = "scale(1)";
             var portfolioElementUrl = this.getElementsByTagName('a')[0].href
-            setTimeout(function () { myFunc(portfolioElementUrl) }, 500);
+            setTimeout(function () { myFunc(portfolioElementUrl) }, 1500);
 
         });
     }
