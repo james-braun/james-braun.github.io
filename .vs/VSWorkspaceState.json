@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\css",
+    "\\js"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\js\\ie_app.js",
   "PreviewInSolutionExplorer": false
 }

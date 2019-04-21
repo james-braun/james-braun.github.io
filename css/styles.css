@@ -66,6 +66,7 @@ body {
 
 .attribute {
     margin: 0 0.625em 0.625em;
+    postion: relative;
 }
 
 #contact {
