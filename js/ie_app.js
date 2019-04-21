@@ -62,6 +62,8 @@ $(document).ready(function () {
         });
  
         portfolio[i].addEventListener('touchstart', function () {
+            this.getElementsByTagName('h2')[0].style.color = "cadetblue";
+            this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
             eventFlagTwo = true;
             this.style.transform = "scale(1.3)";
         });
@@ -71,6 +73,8 @@ $(document).ready(function () {
         });
 
         portfolio[i].addEventListener('touchend', function (e) {
+            this.getElementsByTagName('h2')[0].style.color = "darkslateblue";
+            this.getElementsByTagName('h3')[0].style.color = "cadetblue";
             if (!eventFlag) {
                 e.preventDefault();
             }
