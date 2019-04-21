@@ -44,7 +44,7 @@ $(document).ready(function () {
         });
     });
 
-
+    var eventFlag = false;
 
     for (i = 0; i < portfolio.length; i += 1) {
         portfolio[i].addEventListener('mouseover', function () {
@@ -61,11 +61,21 @@ $(document).ready(function () {
             this.style.transform = "scale(1.1)";
         });
 
+        portfolio[i].addEventListener('touchmove', function () {
+            eventFlag = true;
+        });
+
         portfolio[i].addEventListener('touchend', function (e) {
-            e.preventDefault();
+            if (!eventFlag) {
+                e.preventDefault();
+            }
             this.style.transform = "scale(1)";
             var portfolioElementUrl = this.getElementsByTagName('a')[0].href
-            setTimeout(function () { myFunc(portfolioElementUrl) }, 1500);
+            if (!eventFlag) {
+                setTimeout(function () { myFunc(portfolioElementUrl) }, 500);
+                eventFlag = false;
+            }
+
 
         });
     }
