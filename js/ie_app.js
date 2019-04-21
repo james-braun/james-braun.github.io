@@ -7,8 +7,10 @@ $(document).ready(function () {
 
     // create a input element.
     const searchElement = document.createElement("input");
-    const portfolio = document.getElementsByClassName("portfolio-pictures-and-text");
     document.getElementById('search-bar').appendChild(searchElement);
+
+    // Holds list of projects in my portfolio.
+    const portfolio = document.getElementsByClassName("portfolio-pictures-and-text");
 
     // set input elements attributes.
     searchElement.setAttribute('type', 'search');
@@ -44,48 +46,66 @@ $(document).ready(function () {
         });
     });
 
-    var eventFlag = false;
-    var eventFlagTwo = false;
+    // flag to control if new page is to load or page is to scroll.
+    var touchMoveFlag = false;
 
+    // flag to control if mouseover waas triggered by touchstart.
+    var touchStartFlag = false;
+
+    // add event listeners
     for (i = 0; i < portfolio.length; i += 1) {
+
+        // change colors on mouseover.
         portfolio[i].addEventListener('mouseover', function () {
-            if (!eventFlagTwo) {
+
+            // if touchstart has not triggered mouseover listener then invert text colors.
+            if (!touchStartFlag) {
                 this.getElementsByTagName('h2')[0].style.color = "cadetblue";
                 this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
-                eventFlagTwo = false;
+                touchStartFlag = false;
             }
         });
 
+        // change colors on mouseout.
         portfolio[i].addEventListener('mouseout', function () {
             this.getElementsByTagName('h2')[0].style.color = "darkslateblue";
             this.getElementsByTagName('h3')[0].style.color = "cadetblue";
         });
- 
+
+        // change colors on touchstart and lift portfolio item off the page.
         portfolio[i].addEventListener('touchstart', function () {
             this.getElementsByTagName('h2')[0].style.color = "cadetblue";
             this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
-            eventFlagTwo = true;
             this.style.transform = "scale(1.3)";
+
+            // Stop mouseover from changing text colors.
+            touchStartFlag = true;
         });
 
+        // if user scolls then cancel webpage call.
         portfolio[i].addEventListener('touchmove', function () {
-            eventFlag = true;
+            touchMoveFlag = true;
         });
 
+        // change color on touchend and if user has not scrolled then goto project page.
         portfolio[i].addEventListener('touchend', function (e) {
             this.getElementsByTagName('h2')[0].style.color = "darkslateblue";
             this.getElementsByTagName('h3')[0].style.color = "cadetblue";
-            if (!eventFlag) {
+
+            // if user has not scrolled then prevent default behavior of touchend.
+            if (!touchMoveFlag) {
                 e.preventDefault();
             }
+
+            // put item back on page.
             this.style.transform = "scale(1)";
+
+            // after 375 mili-second if user has not scrolled then goto project page.
             var portfolioElementUrl = this.getElementsByTagName('a')[0].href
-            if (!eventFlag) {
+            if (!touchMoveFlag) {
                 setTimeout(function () { window.location.href = portfolioElementUrl }, 375);
-                eventFlag = false;
+                touchMoveFlag = false;
             }
         });
-    }
-
-    
+    } 
 });
