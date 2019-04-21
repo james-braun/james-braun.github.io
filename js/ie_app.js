@@ -58,7 +58,9 @@ $(document).ready(function () {
         });
  
         portfolio[i].addEventListener('touchstart', function () {
-            this.style.transform = "scale(1.1)";
+           this.getElementsByTagName('h2')[0].style.color = "cadetblue";
+           this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
+           this.style.transform = "scale(1.1)";
         });
 
         portfolio[i].addEventListener('touchmove', function () {
@@ -69,6 +71,8 @@ $(document).ready(function () {
             if (!eventFlag) {
                 e.preventDefault();
             }
+            this.getElementsByTagName('h2')[0].style.color = "darkslateblue";
+            this.getElementsByTagName('h3')[0].style.color = "cadetblue";
             this.style.transform = "scale(1)";
             var portfolioElementUrl = this.getElementsByTagName('a')[0].href
             if (!eventFlag) {
