@@ -45,7 +45,7 @@ body {
     margin-bottom: 1em;
     color: antiquewhite;
 }
-
+ 
 .portfolio-pictures-and-text {
     width: 19.375em;
     margin: 0 auto 1.5em;
@@ -93,6 +93,8 @@ body {
 
 .svg {
     margin: 0 0.3125em;
+    fill: antiquewhite;
+    text-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 a {
