@@ -67,22 +67,22 @@ $(document).ready(function () {
 
             // if touchstart has not triggered mouseover listener then invert text colors.
             if (!touchStartFlag) {
-                this.getElementsByTagName('h2')[0].style.color = "cadetblue";
-                this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
+                this.getElementsByTagName('h2')[0].style.color = "white";
+                this.getElementsByTagName('h3')[0].style.color = "antiquewhite";
                 touchStartFlag = false;
             }
         });
 
         // change colors on mouseout.
         portfolio[i].addEventListener('mouseout', function () {
-            this.getElementsByTagName('h2')[0].style.color = "darkslateblue";
-            this.getElementsByTagName('h3')[0].style.color = "cadetblue";
+            this.getElementsByTagName('h2')[0].style.color = "antiquewhite";
+            this.getElementsByTagName('h3')[0].style.color = "white";
         });
 
         // change colors on touchstart and lift portfolio item off the page.
         portfolio[i].addEventListener('touchstart', function () {
-            this.getElementsByTagName('h2')[0].style.color = "cadetblue";
-            this.getElementsByTagName('h3')[0].style.color = "darkslateblue";
+            this.getElementsByTagName('h2')[0].style.color = "white";
+            this.getElementsByTagName('h3')[0].style.color = "antiquewhite";
             this.style.zIndex = 1000;
             this.style.transform = "scale(1.3)";
 
@@ -97,8 +97,8 @@ $(document).ready(function () {
 
         // change color on touchend and if user has not scrolled then goto project page.
         portfolio[i].addEventListener('touchend', function (e) {
-            this.getElementsByTagName('h2')[0].style.color = "darkslateblue";
-            this.getElementsByTagName('h3')[0].style.color = "cadetblue";
+            this.getElementsByTagName('h2')[0].style.color = "antiquewhite";
+            this.getElementsByTagName('h3')[0].style.color = "white";
 
             // if user has not scrolled then prevent default behavior of touchend.
             if (!touchMoveFlag) {

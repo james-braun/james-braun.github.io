@@ -5,8 +5,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background-color: aliceblue;
-    text-shadow: 0.3125em 0.3125em 0.3125em #aaaaaa;
+    background-color: burlywood;
+    text-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 .navigation {
@@ -21,7 +21,7 @@ body {
     margin: 1em auto 1.5em;
     width: 17.5em;
     border: solid 1px lightslategray;
-    box-shadow: 0.3125em 0.3125em 0.3125em #aaaaaa;
+    box-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 .item {
@@ -38,12 +38,12 @@ body {
     padding: 0.625em;
     background-color: antiquewhite;
     border: solid 1px lightslategray;
-    box-shadow: 0.3125em 0.3125em 0.3125em #aaaaaa;
+    box-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 #portfolio {
     margin-bottom: 1em;
-    color: darkslateblue;
+    color: antiquewhite;
 }
 
 .portfolio-pictures-and-text {
@@ -59,7 +59,7 @@ body {
     padding: 0.625em;
     background-color: antiquewhite;
     border: solid 1px lightslategray;
-    box-shadow: 0.3125em 0.3125em 0.3125em #aaaaaa;
+    box-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 .portfolio-pictures-and-text:hover {
@@ -97,15 +97,15 @@ body {
 
 a {
     text-decoration: none;
-    color: darkslateblue;
+    color: antiquewhite;
 }
 
 .light-text {
-    color: cadetblue;
+    color: white;
 }
 
 h2 {
-    color: darkslateblue;
+    color: antiquewhite;
 }
 
 .footer-container {
