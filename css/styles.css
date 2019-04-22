@@ -109,6 +109,10 @@ h2 {
     color: antiquewhite;
 }
 
+.repo {
+    color: aquamarine;
+}
+
 .footer-container {
     display: flex;
     justify-content: center;
