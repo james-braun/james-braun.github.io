@@ -117,7 +117,7 @@ $(document).ready(function () {
             // after 375 mili-second if user has not scrolled then goto project page.
             var portfolioElementUrl = this.getElementsByTagName('a')[0].href;
             if (!touchMoveFlag) {
-                setTimeout(function () { window.location.href = portfolioElementUrl; }, 375);
+                window.location.href = portfolioElementUrl;
                 touchMoveFlag = false;
             }
         });
