@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     background-color: burlywood;
-    text-shadow: 0.3125em 0.3125em 0.3125em black;
+    /*text-shadow: 0.3125em 0.3125em 0.3125em black;*/
 }
 
 .navigation {
@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 50px;
+    text-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 #search {
@@ -21,7 +22,6 @@ body {
     margin: 1em auto 1.5em;
     width: 17.5em;
     border: solid 1px lightslategray;
-    box-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 .item {
@@ -59,12 +59,12 @@ body {
     padding: 0.625em;
     background-color: antiquewhite;
     border: solid 1px lightslategray;
-    box-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 .portfolio-pictures-and-text:hover {
     transform: scale(1.1);
     z-index: 1000;
+    /*text-shadow: 0.3125em 0.3125em 0.3125em black;*/
 }
 
 .attribute {
@@ -76,10 +76,15 @@ body {
     margin: 4.6875em auto 0;
 }
 
+#contact h2 {
+    text-shadow: 0.3125em 0.3125em 0.3125em black;
+}
+
 .phone-email {
     display: flex;
     justify-content: center;
     height: 2em;
+    text-shadow: 0.3125em 0.3125em 0.3125em black;
 }
 
 .item2 {
@@ -107,6 +112,7 @@ a {
 
 h2 {
     color: antiquewhite;
+    /*text-shadow: 0.3125em 0.3125em 0.3125em black;*/
 }
 
 .repo {
