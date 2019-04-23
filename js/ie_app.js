@@ -61,7 +61,6 @@ $(document).ready(function () {
         // if repository touchstart then goto repository page.
         repository[i].addEventListener('touchstart', function (e) {
             e.preventDefault();
-            e.cancelable = false;
             window.location.href = this.href;
         });
 
@@ -88,6 +87,7 @@ $(document).ready(function () {
 
         // change colors on touchstart and lift portfolio item off the page.
         portfolio[i].addEventListener('touchstart', function (e) {
+            e.cancelable = false;
             this.getElementsByTagName('h2')[0].style.color = "white";
             this.getElementsByTagName('h3')[0].style.color = "antiquewhite";
             this.style.zIndex = 1000;
