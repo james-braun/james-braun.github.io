@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    // select and remove H1 element.
+    // select and remove span element.
     $(document.getElementById('gallery-heading')).hide();
 
     // create a input element.
@@ -11,6 +11,8 @@ $(document).ready(function () {
 
     // Holds list of projects in my portfolio.
     const portfolio = document.getElementsByClassName("portfolio-pictures-and-text");
+
+    // holds lists of repositories o page.
     const repository = document.getElementsByClassName("repo");
 
     // set input elements attributes.
@@ -50,7 +52,7 @@ $(document).ready(function () {
     // flag to control if new page is to load or page is to scroll.
     var touchMoveFlag = false;
 
-    // flag to control if mouseover waas triggered by touchstart.
+    // flag to control if mouseover was triggered by touchstart.
     var touchStartFlag = false;
 
     // add event listeners
@@ -75,7 +77,7 @@ $(document).ready(function () {
             }
         });
 
-        // change colors on mouseout.
+        // change colors aand add a box shadow to portfolio image on mouseout.
         portfolio[i].addEventListener('mouseout', function () {
             $(this.getElementsByTagName('img')[0]).css("box-shadow", "none");
             $(this).css("text-shadow", "none");
@@ -113,12 +115,13 @@ $(document).ready(function () {
             this.style.transform = "scale(1)";
             this.style.zIndex = 100;
 
-            // after 375 mili-second if user has not scrolled then goto project page.
+            // after 750 mili-second if user has not scrolled then goto project page.
             if (!touchMoveFlag) {
                 var url = this.getElementsByTagName('a')[0].href;
-                window.setTimeout(function () { window.location.href = url; }, 1000);
+                window.setTimeout(function () { window.location.href = url; }, 750);
             }
 
+            // if user was scrolling end touchmove.
             if (touchMoveFlag) {
                 touchMoveFlag = false;
             }
