@@ -102,7 +102,7 @@ $(document).ready(function () {
         });
 
         // change color on touchend and if user has not scrolled then goto project page.
-        portfolio[i].addEventListener('touchend touchcancel', function (e) {
+        portfolio[i].addEventListener('touchend', function (e) {
             this.getElementsByTagName('h2')[0].style.color = "antiquewhite";
             this.getElementsByTagName('h3')[0].style.color = "white";
 
