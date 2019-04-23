@@ -47,6 +47,8 @@ $(document).ready(function () {
         });
     });
 
+    var time;
+
     // flag to control if new page is to load or page is to scroll.
     var touchMoveFlag = false;
 
@@ -85,12 +87,11 @@ $(document).ready(function () {
 
         // change colors on touchstart and lift portfolio item off the page.
         portfolio[i].addEventListener('touchstart', function (e) {
-            e.preventDefault();
             this.getElementsByTagName('h2')[0].style.color = "white";
             this.getElementsByTagName('h3')[0].style.color = "antiquewhite";
             this.style.zIndex = 1000;
             this.style.transform = "scale(1.3)";
-
+            
             // Stop mouseover from changing text colors.
             touchStartFlag = true;
         });
@@ -98,6 +99,7 @@ $(document).ready(function () {
         // if user scolls then cancel webpage call.
         portfolio[i].addEventListener('touchmove', function () {
             touchMoveFlag = true;
+            time = null;
         });
 
         // change color on touchend and if user has not scrolled then goto project page.
@@ -106,18 +108,19 @@ $(document).ready(function () {
             this.getElementsByTagName('h3')[0].style.color = "white";
 
             // if user has not scrolled then prevent default behavior of touchend.
-            if (!touchMoveFlag) {
-                e.preventDefault();
-            }
+            e.preventDefault();
 
             // put item back on page.
             this.style.transform = "scale(1)";
             this.style.zIndex = 100;
 
             // after 375 mili-second if user has not scrolled then goto project page.
-            var portfolioElementUrl = this.getElementsByTagName('a')[0].href;
             if (!touchMoveFlag) {
-                window.location.href = portfolioElementUrl;
+                var url = this.getElementsByTagName('a')[0].href;
+                time = window.setTimeout(function () { window.location.href = url; }, 1000);
+            }
+
+            if (touchMoveFlag) {
                 touchMoveFlag = false;
             }
         });
