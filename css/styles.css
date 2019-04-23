@@ -6,6 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     background-color: burlywood;
+    -webkit-touch-callout: none;
 }
 
 .navigation {
