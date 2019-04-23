@@ -44,6 +44,7 @@ body {
 #portfolio {
     margin-bottom: 1em;
     color: antiquewhite;
+    text-shadow: 0.3125em 0.3125em 0.3125em black;
 }
  
 .portfolio-pictures-and-text {
