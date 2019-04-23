@@ -47,8 +47,6 @@ $(document).ready(function () {
         });
     });
 
-    var time;
-
     // flag to control if new page is to load or page is to scroll.
     var touchMoveFlag = false;
 
@@ -99,7 +97,6 @@ $(document).ready(function () {
         // if user scolls then cancel webpage call.
         portfolio[i].addEventListener('touchmove', function () {
             touchMoveFlag = true;
-            time = null;
         });
 
         // change color on touchend and if user has not scrolled then goto project page.
@@ -117,7 +114,7 @@ $(document).ready(function () {
             // after 375 mili-second if user has not scrolled then goto project page.
             if (!touchMoveFlag) {
                 var url = this.getElementsByTagName('a')[0].href;
-                time = window.setTimeout(function () { window.location.href = url; }, 1000);
+                window.setTimeout(function () { window.location.href = url; }, 1000);
             }
 
             if (touchMoveFlag) {
