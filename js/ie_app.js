@@ -67,7 +67,7 @@ $(document).ready(function () {
         // if repository touchstart then goto repository page.
         repository[i].addEventListener('touchstart', function (e) {
             e.preventDefault();
-            e.stopImmediatePropagation();
+            e.stopPropagation();
             window.location.href = this.href;
         });
 
