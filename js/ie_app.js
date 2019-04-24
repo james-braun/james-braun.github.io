@@ -94,7 +94,6 @@ $(document).ready(function () {
 
         // change colors on touchstart and lift portfolio item off the page.
         portfolio[i].addEventListener('touchstart', function () {
-            this.onselectstart = function () { return false; };
             this.getElementsByTagName('h2')[0].style.color = "white";
             this.getElementsByTagName('h3')[0].style.color = "antiquewhite";
             this.style.zIndex = 1000;
@@ -111,7 +110,6 @@ $(document).ready(function () {
 
         // change color on touchend and if user has not scrolled then goto project page.
         portfolio[i].addEventListener('touchend', function (e) {
-            this.onselectstart = function () { return false; };
             this.getElementsByTagName('h2')[0].style.color = "antiquewhite";
             this.getElementsByTagName('h3')[0].style.color = "white";
 
