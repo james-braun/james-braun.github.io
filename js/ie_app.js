@@ -59,14 +59,16 @@ $(document).ready(function () {
     // flag to control if mouseover was triggered by touchstart.
     var touchStartFlag = false;
 
+    var repoTouch = false;
+
     // add event listeners
     for (var i = 0; i < portfolio.length; i += 1) {
 
         // if repository touchstart then goto repository page.
         repository[i].addEventListener('touchstart', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
+            e.preventDefault();;
             window.location.href = this.href;
+            repoTouch = true;
         });
 
         // change colors on mouseover.
@@ -121,7 +123,7 @@ $(document).ready(function () {
             this.style.zIndex = 100;
 
             // after 750 mili-second if user has not scrolled then goto project page.
-            if (!touchMoveFlag) {
+            if (!touchMoveFlag && !repoTouch) {
                 var url = this.getElementsByTagName('a')[0].href;
                 window.setTimeout(function () { window.location.href = url; }, 750);
             }
@@ -129,6 +131,10 @@ $(document).ready(function () {
             // if user was scrolling end touchmove.
             if (touchMoveFlag) {
                 touchMoveFlag = false;
+            }
+
+            if (repoTouch) {
+                repoTouch = false;
             }
         });
     } 
