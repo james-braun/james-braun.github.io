@@ -5,6 +5,10 @@ $(document).ready(function () {
     // select and remove span element.
     $(document.getElementById('gallery-heading')).hide();
 
+    document.oncontextmenu = function () {
+        return false;
+    }
+
     // create a input element.
     const searchElement = document.createElement("input");
     document.getElementById('search-bar').appendChild(searchElement);
