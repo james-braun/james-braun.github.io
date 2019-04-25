@@ -120,7 +120,7 @@ $(document).ready(function () {
 
             // put item back on page.
             this.style.transform = "scale(1)";
-            this.style.zIndex = 100;
+            this.style.zIndex = -1;
 
             // after 750 mili-second if user has not scrolled then goto project page.
             if (!touchMoveFlag && !repoTouch) {
