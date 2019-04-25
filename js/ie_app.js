@@ -71,6 +71,10 @@ $(document).ready(function () {
             repoTouch = true;
         });
 
+        portfolio[i].addEventListener('touchcancel', function (e) {
+            e.preventDefault();
+        });
+
         // change colors on mouseover.
         portfolio[i].addEventListener('mouseover', function () {
 
