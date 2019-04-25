@@ -52,7 +52,7 @@ body {
     margin: 0 auto 1.5em;
     transition: transform 0.5s;
     position: relative;
-    z-index: 0;
+    /*z-index: 0;*/
     -webkit-user-select: none;
 }
 
@@ -65,7 +65,7 @@ body {
 
 .portfolio-pictures-and-text:hover {
     transform: scale(1.1);
-    z-index: 1000;
+    /*z-index: 1000;*/
     /*text-shadow: 0.3125em 0.3125em 0.3125em black;*/
 }
 
