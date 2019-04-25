@@ -71,10 +71,6 @@ $(document).ready(function () {
             repoTouch = true;
         });
 
-        portfolio[i].addEventListener('touchcancel', function (e) {
-            e.preventDefault();
-        });
-
         // change colors on mouseover.
         portfolio[i].addEventListener('mouseover', function () {
 
@@ -124,6 +120,7 @@ $(document).ready(function () {
 
             // put item back on page.
             this.style.transform = "scale(1)";
+            this.style.webkitTransform = "scale(1)";
             this.style.zIndex = 0;
 
             // after 750 mili-second if user has not scrolled then goto project page.
