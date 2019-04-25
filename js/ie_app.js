@@ -136,6 +136,6 @@ $(document).ready(function () {
             if (repoTouch) {
                 repoTouch = false;
             }
-        });
+        }, true);
     } 
 });
