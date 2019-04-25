@@ -119,7 +119,7 @@ $(document).ready(function () {
             }
 
             // put item back on page.
-            this.style.transform = "scale(1)";
+            $(this).css("transform", "scale(1)");//this.style.transform = "scale(1)";
             this.style.zIndex = 0;
 
             // after 750 mili-second if user has not scrolled then goto project page.
@@ -136,6 +136,6 @@ $(document).ready(function () {
             if (repoTouch) {
                 repoTouch = false;
             }
-        }, true);
+        });
     } 
 });
