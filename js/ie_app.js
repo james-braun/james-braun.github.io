@@ -93,7 +93,8 @@ $(document).ready(function () {
         });
 
         // change colors on touchstart and lift portfolio item off the page.
-        portfolio[i].addEventListener('touchstart', function () {
+        portfolio[i].addEventListener('touchstart', function (e) {
+            e.preventDefault();
             this.getElementsByTagName('h2')[0].style.color = "white";
             this.getElementsByTagName('h3')[0].style.color = "antiquewhite";
             this.style.zIndex = 1000;
