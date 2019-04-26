@@ -122,9 +122,10 @@ $(document).ready(function () {
             }
 
             // put item back on page.
-            $(this).css("transform", "scale(1)");//this.style.transform = "scale(1)";
-            this.style.zIndex = 0;
-
+            if ((navigator.userAgent.indexOf('iPhone') < 0) && navigator.userAgent.indexOf('iPad') < 0) {
+                this.style.zIndex = 0;
+                this.style.transform = "scale(1)";
+            }
             // after 750 mili-second if user has not scrolled then goto project page.
             if (!touchMoveFlag && !repoTouch) {
                 var url = this.getElementsByTagName('a')[0].href;
