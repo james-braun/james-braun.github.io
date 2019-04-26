@@ -96,7 +96,8 @@ $(document).ready(function () {
         portfolio[i].addEventListener('touchstart', function () {
             this.getElementsByTagName('h2')[0].style.color = "white";
             this.getElementsByTagName('h3')[0].style.color = "antiquewhite";
-            if ((navigator.userAgent.indexOf('iPhone') < 0) || navigator.userAgent.indexOf('iPad') < 0) {
+            console.log(navigator.userAgent);
+            if ((navigator.userAgent.indexOf('iPhone') < 0) && navigator.userAgent.indexOf('iPad') < 0) {
                 this.style.zIndex = 1000;
                 this.style.transform = "scale(1.3)";
             }
