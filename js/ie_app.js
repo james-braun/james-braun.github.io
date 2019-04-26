@@ -100,6 +100,8 @@ $(document).ready(function () {
             if ((navigator.userAgent.indexOf('iPhone') < 0) && navigator.userAgent.indexOf('iPad') < 0) {
                 this.style.zIndex = 1000;
                 this.style.transform = "scale(1.3)";
+            } else {
+                this.style.transform = "scale(1)";
             }
 
             // Stop mouseover from changing text colors.
