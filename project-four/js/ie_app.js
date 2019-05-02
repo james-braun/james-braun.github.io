@@ -3,18 +3,11 @@
 $(document).ready(function() {
 
     // select and remove H1 element.
-    $(document.getElementById('gallery-heading')).hide();
+    $('#gallery-heading').hide();
     
     // create a input element.
-    const searchElement = document.createElement("input");
-    document.getElementById('search-bar').appendChild(searchElement);
-   
-    // set input elements attributes.
-    searchElement.setAttribute('type', 'search');
-    searchElement.setAttribute('id', 'search');
-    searchElement.setAttribute('placeholder', 'Search');
-    searchElement.setAttribute('value', '');
-    searchElement.setAttribute('name', 'user_search');
+    const $searchElement = $('<input type="search" id="search" placeholder="Search" value="" name="user_search" />');
+    $('#search-bar').append($searchElement);
 
     // show lightbox arrows on all mobile devices.
     lightbox.option({
@@ -32,13 +25,13 @@ $(document).ready(function() {
     }
 
     // input event keyup()
-    document.querySelector('input').addEventListener('keyup', function () {
+    $('input').keyup(function () {
 
         // cycle though all anchor elements
         $('a').each(function() {
 
             // if the for loop anchor element is not null.  compare the anchor elements data-title to the search elements value and show or hide pictures as necessary.
-            if (($(this).attr('data-title')) && (includes($(this).attr('data-title').toUpperCase(), document.getElementById('search').value.toUpperCase()) === true)) {
+            if (($(this).attr('data-title')) && (includes($(this).attr('data-title').toUpperCase(), $('#search').val().toUpperCase()) === true)) {
                 $(this).show();
             } else {
                 $(this).hide();

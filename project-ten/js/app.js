@@ -1,19 +1,21 @@
+
+// make an ajax request to get 12 random users and
+// post there data to the page.
 $.ajax({
     url: 'https://randomuser.me/api/?results=12&nat=us',
     dataType: 'json',
-    success: function(data) {
-      console.log(data);
+    success: function (data) {
       for (let i = 0; i < data.results.length; ++i) {
-        $(`.person-${i} img`).attr('src', `${data.results[i].picture.thumbnail}`);
-        $(`.person-${i} img`).attr('alt', `${data.results[i].name.first} ${data.results[i].name.last}`);
-        $(`.person-${i} .name`).html(data.results[i].name.first + " " + data.results[i].name.last);
-        $(`.person-${i} .email`).html(data.results[i].email);
-        $(`.person-${i} .city`).html(data.results[i].location.city);
-        $(`.person-${i} .phone`).html(data.results[i].phone);
-        $(`.person-${i} .street`).html(data.results[i].location.street);
-        $(`.person-${i} .state`).html(data.results[i].location.state);
-        $(`.person-${i} .postcode`).html(data.results[i].location.postcode);
-        $(`.person-${i} .birthday`).html(`Birthday: ${data.results[i].dob.date.substr(5,2)}/${data.results[i].dob.date.substr(8,2)}/${data.results[i].dob.date.substr(2,2)}`);
+        $(".person-" + i + " img").attr('src', data.results[i].picture.thumbnail);
+        $(".person-" + i + " img").attr('alt', data.results[i].name.first + " " + data.results[i].name.last);
+        $(".person-" + i + " .name").html(data.results[i].name.first + " " + data.results[i].name.last);
+        $(".person-" + i + " .email").html(data.results[i].email);
+        $(".person-" + i + " .city").html(data.results[i].location.city);
+        $(".person-" + i + " .phone").html(data.results[i].phone);
+        $(".person-" + i + " .street").html(data.results[i].location.street);
+        $(".person-" + i + " .state").html(data.results[i].location.state);
+        $(".person-" + i + " .postcode").html(data.results[i].location.postcode);
+        $(".person-" + i + " .birthday").html("Birthday: " + data.results[i].dob.date.substr(5,2) + "/" + data.results[i].dob.date.substr(8,2) + "/" + data.results[i].dob.date.substr(2,2));
       }
     }
   });
