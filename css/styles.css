@@ -38,7 +38,7 @@ body {
     padding: 0.625em;
     background-color: antiquewhite;
     border: solid 1px lightslategray;
-    box-shadow: 0.3125em 0.3125em 0.3125em black;
+    box-shadow: 1.25em 1.25em 3.125em black;
 }
 
 #portfolio {

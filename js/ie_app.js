@@ -76,8 +76,8 @@ $(document).ready(function () {
 
             // if touchstart has not triggered mouseover listener then invert text colors.
             if (!touchStartFlag) {
-                $(this.getElementsByTagName('img')[0]).css("box-shadow", "0.3125em 0.3125em 0.3125em black");
-                $(this).css("text-shadow", "0.3125em 0.3125em 0.3125em black");
+                $(this.getElementsByTagName('img')[0]).css("box-shadow", "1.25em 1.25em 3.125em black");
+                $(this).css("text-shadow", "1.25em 1.25em 3.125em black");
                 this.getElementsByTagName('h2')[0].style.color = "white";
                 this.getElementsByTagName('h3')[0].style.color = "antiquewhite";
                 touchStartFlag = false;
