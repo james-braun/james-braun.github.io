@@ -1,110 +1,289 @@
-h2 {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 2em;
+/* ===================================== 
+   Public API Request
+======================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+* {
+	box-sizing: border-box;
 }
 
-.outer-container,
-.container {
+html, body {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    background: #9eadcd /*rgba(51, 235, 134, 0.9);*/
+}
+
+header {
+    padding: 15px 5px 5px;
+}
+
+.header-inner-container {
+    max-width: 1180px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 1.25em;
+    color: rgba(50, 50, 50, 0.9);
+    margin-top: 35px;
+}
+
+.search-input {
+    padding: 0.4rem 1rem;
+    border: 1px solid darkslategrey;
+    border-radius: 0.25rem 0 0 0.25rem;
+    background-color: #90a0c0;
+    /*rgba(51, 235, 226, 0.9);*/
+    max-width: 20rem;
+    transition: .4s ease-out;
+    outline: none;
+}
+
+.search-input:active, .search-input:hover, .search-input:focus {
+    background-color: #ae9ecd;
+    border: 1px solid rgba(50, 50, 50, 0.9);
+}
+
+.search-submit {
+    cursor: pointer;
+    height: 33px;
+    background: rgba(245, 245, 245, 0.9);
+    border-radius: 0 0.25rem 0.25rem 0;
+    border: 1px solid rgba(200, 200, 200, 0.9);
+    transition: .4s ease-out;
+    outline: none;
+}
+
+.search-submit:active, .search-submit:hover, .search-submit:focus {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(50, 50, 50, 0.9);
+}
+
+
+/* ===================================== 
+   Gallery
+======================================== */
+
+.gallery {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.container {
-    margin: 0em 5em 5em 7em;
-    border: 1px solid grey;
-    border-radius: 6px;
-    height: 9em;
-    width: 25em;
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 100%;
+    max-width: 360px;
+    margin: 10px 10px 20px;
+    padding: 10px;
+    background: #ae9ecd; /*rgba(51, 235, 226, 0.9);*/
+    border-radius: 0.25em;
+    border: 1px solid rgba(50, 50, 50, 0.3);
+    transition: .4s ease-out;
+    overflow: hidden;
 }
 
-.container:hover {
-    background-color: #ccc;
-}
-
-.image {
-    margin: auto 10px;
-    width: 7em;
-    height: 7em;
+.card-img {
+    width: 95px;
+    margin: 10px 15px auto 10px;
     border-radius: 50%;
 }
 
-.name {
-    font-weight: bold;
-    margin: 1.5em 0 0 1em;
+.card-info-container {
+    text-align: left;
 }
 
-.email,
-.city,
-.phone,
-.street,
-.birthday {
-    margin: .5em 0 0 1em;
+.card-text {
+    font-size: 0.9em;
+    color: rgba(50, 50, 50, 0.9);
+    margin: 7px auto;
+    transition: .4s ease-out;
 }
 
-.divider {
-    width: 19em;
-    margin: 1em auto;
-    border: 1px solid grey;
+.card-name {
+    margin: 20px auto 0;
+    color: rgba(0, 0, 0, 0.7);
 }
 
-.city,
-.state,
-.postcode {
+.cap {
+    text-transform: capitalize;
+}
+
+
+/* ===================================== 
+   Modal
+======================================== */
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.modal {
+    position: relative;
+    width: 95%;
+    max-width: 420px;
+    min-height: 415px;
+    margin: 10px auto auto;
+    padding-bottom: 15px;
+    background: #ae9ecd;
+    /*rgba(51, 235, 226, 0.9);*/
+    border-radius: 0.25em;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    transition: .4s ease-out;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.8);
+    outline: none;
+    border-radius: 0.25em;
+    border: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+.modal-img {
+    width: 150px;
+    margin-top: 35px;
+    border-radius: 50%;
+}
+
+.modal-name {
+    margin-bottom: 5px;
+}
+
+.modal-text {
+    color: rgba(50, 50, 50, 0.7);
+    margin: 10px;
+}
+
+.modal hr {
+    width: 75%;
+    margin: 25px auto 30px;
+    border-color: rgba(0, 0, 0, .2);
+}
+
+.modal-btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 95%;
+    max-width: 420px;
+    padding: 10px 15px 15px;;
+    margin: 10px auto auto;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+
+.modal-btn-container .btn {
     display: inline-block;
+    cursor: pointer;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.75em 1.5em;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.35em;
+    transition: .4s ease-out;
+    outline: none;
+  }
+
+
+.right-arrow {
+    width: 30px;
+    height: 30px;
+    padding-top: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 25px;
 }
 
-/* styles below provided by inspirationalpixels.com/custom-popup-modal */
-/* Outer */
-.popup {
-	width:100%;
-	height:100%;
-	display:none;
-	position:fixed;
-	top:0px;
-	left:0px;
-	background:rgba(0,0,0,0.75);
+.left-arrow {
+    width: 30px;
+    height: 30px;
+    padding-top: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 25px;
 }
 
-/* Inner */
-.popup-inner {
-    text-align: center;
-	max-width:400px;
-	width:90%;
-	padding:40px;
-	position:absolute;
-	top:50%;
-	left:50%;
-	-webkit-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-	box-shadow:0px 2px 6px rgba(0,0,0,1);
-	border-radius:10px;
-	background:#fff;
+/* ===================================== 
+   Media Queries
+======================================== */
+
+/* ===================================== 
+   Tablet
+======================================== */
+
+@media (min-width: 768px) {
+    .header-inner-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .header-text-container {
+        text-align: left;
+    }
+
+    .search-container {
+        margin-top: 25px;
+    }
+
+    .modal {
+        margin-top: 100px;
+    }
 }
 
-/* Close Button */
-.popup-close {
-	width:30px;
-	height:30px;
-	padding-top:4px;
-	display:inline-block;
-	position:absolute;
-	top:0px;
-	right:0px;
-	transition:ease 0.25s all;
-	-webkit-transform:translate(50%, -50%);
-	transform:translate(50%, -50%);
-	border-radius:1000px;
-	background:rgba(0,0,0,0.8);
-	font-family:Arial, Sans-Serif;
-	font-size:20px;
-	text-align:center;
-	line-height:100%;
-    color:#fff;
-    text-decoration: none;
-}
 
-.popup-close:hover {
-	-webkit-transform:translate(50%, -50%) rotate(180deg);
-	transform:translate(50%, -50%) rotate(180deg);
-	background:rgba(0,0,0,1);
-	text-decoration:none;
+/* ===================================== 
+   Desktop
+   Hover styles on desktop 
+======================================== */
+
+@media (min-width: 1024px) {
+
+    .card:hover {
+        background: #9ecdbe; /*rgba(56, 255, 242, 1);*/
+        border: 1px solid rgba(50, 50, 50, 0.9);
+    }
+
+    .card:hover .card-text {
+        color: rgba(25, 25, 25, 1); 
+    }
+
+    .btn:hover {
+        background: rgba(255, 255, 255, 1);
+        color: rgba(25, 25, 25, 1); 
+    }
 }

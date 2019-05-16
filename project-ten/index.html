@@ -1,326 +1,101 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Random user</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
-  </head>
-  <body>
-    <h2>AWESOME STARTUP EMPLOYEE DIRECTORY</h2>
-    <main class="outer-container">
-      <div class="div-container">
-        <div class="container person-0" data-popup-open="popup-0">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div>   
-        <!-- classes popup, popup-inner, popup-close and attributes data-popup and data-popup-close provided by -->
-        <!-- inspirationalpixels.com/custom-popup-modal -->
-        <div class="popup person-0" data-popup="popup-0">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-0" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-0" href="#">x</a>
-          </div>
+﻿<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Public API Requests</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- =======================
+        Gallery container
+    ======================== -->
+        <header>
+            <div class="header-inner-container">
+                <div class="header-text-container">
+                    <h1>AWESOME STARTUP EMPLOYEE DIRECTORY</h1>
+                </div>
+
+                <div class="search-container">
+                    <!-- ======================
+                    Search markup:
+
+                    You can use the commented out markup below as a template
+                    for your search feature, but you must use JS to create and
+                    append it to `search-container` div.
+
+                    IMPORTANT: Altering the arrangememnt of the markup and the
+                    attributes used may break the styles or functionality.
+
+                    <form action="#" method="get">
+                        <input type="search" id="search-input" class="search-input" placeholder="Search...">
+                        <input type="submit" value="&#x1F50D;" id="serach-submit" class="search-submit">
+                    </form>
+                ======================= -->
+                </div>
+            </div>
+        </header>
+
+        <div id="gallery" class="gallery">
+            <!-- ======================
+            Gallery markup:
+
+            You can use the commented out markup below as a template
+            for each of your Gallery items, but you must use JS to
+            create and append them to the `gallery` div.
+
+            IMPORTANT: Altering the arrangememnt of the markup and the
+            attributes used may break the styles or functionality.
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img class="card-img" src="https://placehold.it/90x90" alt="profile picture">
+                </div>
+                <div class="card-info-container">
+                    <h3 id="name" class="card-name cap">first last</h3>
+                    <p class="card-text">email</p>
+                    <p class="card-text cap">city, state</p>
+                </div>
+            </div>
+        ======================= -->
         </div>
-        <div class="container person-1" data-popup-open="popup-1">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div> 
-        <div class="popup person-1" data-popup="popup-1">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-1" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
-          </div>
-        </div>  
-        <div class="container person-2" data-popup-open="popup-2">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div> 
-        <div class="popup person-2" data-popup="popup-2">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-2" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
-          </div>
-        </div>  
-        <div class="container person-3" data-popup-open="popup-3">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div> 
-        <div class="popup person-3" data-popup="popup-3">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-3" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-3" href="#">x</a>
-          </div>
-        </div>  
-      </div>
-      <div class="div-container">
-        <div class="container person-4" data-popup-open="popup-4">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div>  
-        <div class="popup person-4" data-popup="popup-4">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-4" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-4" href="#">x</a>
-          </div>
-        </div> 
-        <div class="container person-5" data-popup-open="popup-5">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div> 
-        <div class="popup person-5" data-popup="popup-5">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-5" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-5" href="#">x</a>
-          </div>
-        </div>  
-        <div class="container person-6" data-popup-open="popup-6">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div> 
-        <div class="popup person-6" data-popup="popup-6">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-6" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-6" href="#">x</a>
-          </div>
-        </div>  
-        <div class="container person-7" data-popup-open="popup-7">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div>  
-        <div class="popup person-7" data-popup="popup-7">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-7" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-7" href="#">x</a>
-          </div>
-        </div> 
-      </div>
-      <div class="div-container">
-        <div class="container person-8" data-popup-open="popup-8">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div> 
-        <div class="popup person-8" data-popup="popup-8">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-8" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-8" href="#">x</a>
-          </div>
-        </div>  
-        <div class="container person-9" data-popup-open="popup-9">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div>  
-        <div class="popup person-9" data-popup="popup-9">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-9" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-9" href="#">x</a>
-          </div>
-        </div> 
-        <div class="container person-10" data-popup-open="popup-10">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div>   
-        <div class="popup person-10" data-popup="popup-10">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-10" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-10" href="#">x</a>
-          </div>
+
+        <!-- =======================
+        Modal markup:
+
+        You can use the commented out markup below as a template
+        for your modal, but you must use JS to create and append
+        it to `body`.
+
+        IMPORTANT: Altering the arrangememnt of the markup and the
+        attributes used may break the styles or functionality.
+
+        <div class="modal-container">
+            <div class="modal">
+                <button type="button" id="modal-close-btn" class="modal-close-btn"><strong>X</strong></button>
+                <div class="modal-info-container">
+                    <img class="modal-img" src="https://placehold.it/125x125" alt="profile picture">
+                    <h3 id="name" class="modal-name cap">name</h3>
+                    <p class="modal-text">email</p>
+                    <p class="modal-text cap">city</p>
+                    <hr>
+                    <p class="modal-text">(555) 555-5555</p>
+                    <p class="modal-text">123 Portland Ave., Portland, OR 97204</p>
+                    <p class="modal-text">Birthday: 10/21/2015</p>
+                </div>
+            </div>
+
+            // IMPORTANT: Below is only for exceeds tasks
+            <div class="modal-btn-container">
+                <button type="button" id="modal-prev" class="modal-prev btn">Prev</button>
+                <button type="button" id="modal-next" class="modal-next btn">Next</button>
+            </div>
         </div>
-        <div class="container person-11"  data-popup-open="popup-11">
-          <img class="image" src="me.jpg" alt="me">
-          <div class="inner-container">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="city">placeholder</div>
-          </div>
-        </div> 
-        <div class="popup person-11" data-popup="popup-11">
-          <div class="popup-inner">
-            <img class="image" src="me.jpg" alt="me">
-            <div class="name">placeholder</div>
-            <div class="email">placeholder</div>
-            <div class="phone">placeholder</div>
-            <div class="divider"></div>
-            <div class="street">placeholder</div>
-            <div class="city">placeholder</div><span>,</span>
-            <div class="state">placeholder</div>
-            <div class="postcode">placeholder</div>
-            <div class="birthday">placeholder</div>
-            <p><a data-popup-close="popup-11" href="#">Close</a></p>
-            
-            <a class="popup-close" data-popup-close="popup-11" href="#">x</a>
-          </div>
-        </div>  
-      </div>
-    </main>
-    <script src="js/app.js"></script>
-  </body>
+    ======================== -->
+        <!-- Add your JS here -->
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
 </html>
